@@ -1,0 +1,35 @@
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, #4c7cff, #76c7ff);
+    color: #333;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: #fff;
+    border: none;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4c7cff, #6ac7ff);
+    border: none;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #6ac7ff, #4c7cff);
+}
+
+a {
+    color: #4c7cff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
