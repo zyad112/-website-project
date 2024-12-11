@@ -1,118 +1,39 @@
-
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* صفحة تسجيل الدخول */
-#loginPage {
+header {
+    background-color: #4682b4;
+    color: white;
+    padding: 10px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
 }
 
-.login-container {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-}
-
-.login-header h1 {
-    font-size: 2.5rem;
-    color: #6a11cb;
-}
-
-.login-header p {
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.login-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #6a11cb;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.login-container button:hover {
-    background-color: #2575fc;
-}
-
-.login-footer {
-    margin-top: 20px;
-    font-size: 0.8rem;
+nav button {
+    background-color: #add8e6;
     color: #333;
-}
-
-/* الصفحة الرئيسية */
-#app {
-    display: flex;
-}
-
-.sidebar {
-    width: 200px;
-    background: #6a11cb;
-    color: white;
-    padding: 20px;
-    min-height: 100vh;
-}
-
-.sidebar h3 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.sidebar nav button {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background: transparent;
-    color: white;
     border: none;
-    text-align: left;
     padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.sidebar nav button i {
     margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.sidebar nav button:hover {
-    background: rgba(255, 255, 255, 0.2);
+nav button:hover {
+    background-color: #87ceeb;
 }
 
 main {
-    flex: 1;
     padding: 20px;
-    background: #f7f9fb;
-    min-height: 100vh;
 }
 
 section {
@@ -121,4 +42,85 @@ section {
 
 section.active {
     display: block;
+}
+
+#loginPage.active {
+    display: block;
+}
+
+#loginPage.inactive {
+    display: none;
+}
+
+#app.inactive {
+    display: none;
+}
+
+#app.active {
+    display: block;
+}
+
+#postForm, #messageForm, #aiForm {
+    margin-top: 20px;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4169e1;
+}
+
+#profileInfo {
+    text-align: center;
+}
+
+#profileInfo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#aiResults, #messageList, #posts, #userPosts {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.post {
+    background-color: #e6f7ff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.message {
+    background-color: #ffebcc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.aiResult {
+    background-color: #f0e68c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
