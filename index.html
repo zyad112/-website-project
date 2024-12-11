@@ -1,77 +1,31 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوك بوك</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LookBook - Login</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="loginPage" class="active">
-        <h2>تسجيل الدخول</h2>
-        <form id="loginForm" onsubmit="login(event)">
-            <input type="text" id="username" placeholder="اسم المستخدم" required>
-            <input type="password" id="password" placeholder="كلمة المرور" required>
-            <button type="submit">تسجيل الدخول</button>
-        </form>
+  <button id="toggle-dark-mode">🌙</button>
+  <div class="login-container">
+    <div class="login-form">
+      <h2 id="welcome">Welcome to LookBook</h2>
+      <form id="login-form">
+        <input type="email" placeholder="Email or Phone" id="email" required />
+        <input type="password" placeholder="Password" id="password" required />
+        <button type="submit" id="login-btn">Log In</button>
+      </form>
+      <p>or</p>
+      <button class="social-login google">Log in with Google</button>
+      <button class="social-login apple">Log in with Apple</button>
     </div>
-    <div id="app" class="inactive">
-        <header>
-            <h1>لوك بوك</h1>
-            <nav>
-                <button onclick="setActiveSection('home')"><i class="fas fa-home"></i> الرئيسية</button>
-                <button onclick="setActiveSection('profile')"><i class="fas fa-user"></i> الملف الشخصي</button>
-                <button onclick="setActiveSection('settings')"><i class="fas fa-cog"></i> الإعدادات</button>
-                <button onclick="setActiveSection('aiFeatures')"><i class="fas fa-brain"></i> ميزات الذكاء الاصطناعي</button>
-                <button onclick="setActiveSection('messages')"><i class="fas fa-envelope"></i> الرسائل</button>
-            </nav>
-        </header>
-        <main>
-            <section id="home" class="inactive">
-                <h2>الصفحة الرئيسية</h2>
-                <div id="posts"></div>
-                <div id="postForm">
-                    <textarea id="newPost" placeholder="اكتب منشورك هنا..."></textarea>
-                    <button onclick="submitPost()">نشر</button>
-                </div>
-            </section>
-            <section id="profile">
-                <h2>الملف الشخصي</h2>
-                <div id="profileInfo">
-                    <img src="profile.jpg" alt="صورة الملف الشخصي">
-                    <p>اسم المستخدم: John Doe</p>
-                    <p>البريد الإلكتروني: john@example.com</p>
-                    <div id="userPosts"></div>
-                </div>
-            </section>
-            <section id="settings">
-                <h2>الإعدادات</h2>
-                <div id="settingsForm">
-                    <label for="theme">تغيير الثيم:</label>
-                    <select id="theme" onchange="changeTheme()">
-                        <option value="light">فاتح</option>
-                        <option value="dark">داكن</option>
-                    </select>
-                </div>
-            </section>
-            <section id="aiFeatures">
-                <h2>ميزات الذكاء الاصطناعي</h2>
-                <div id="aiForm">
-                    <input type="text" id="aiInput" placeholder="اكتب ما ترغب في البحث عنه...">
-                    <button onclick="searchAI()">بحث</button>
-                </div>
-                <div id="aiResults"></div>
-            </section>
-            <section id="messages">
-                <h2>الرسائل</h2>
-                <div id="messageForm">
-                    <textarea id="newMessage" placeholder="اكتب رسالتك هنا..."></textarea>
-                    <button onclick="sendMessage()">إرسال</button>
-                </div>
-                <div id="messageList"></div>
-            </section>
-        </main>
-    </div>
+  </div>
+  <select id="language-switcher">
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+    <option value="fr">Français</option>
+  </select>
+  <script src="js/script.js"></script>
 </body>
 </html>
